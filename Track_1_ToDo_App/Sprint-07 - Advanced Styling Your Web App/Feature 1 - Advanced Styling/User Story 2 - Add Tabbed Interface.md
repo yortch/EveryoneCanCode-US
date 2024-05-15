@@ -220,7 +220,7 @@ Note however, that the Details, Edit, and Recommendations buttons are still visi
 #### Removing extra buttons from the main list
 
 #### 1. Remove the Details, Edit, and Recommendations buttons from the main list
-Next, we need to remove the Details, Edit, and Recommendations buttons from the main list. Open the `index.html` file and remove the following code from the `<li id="task-{{ todo.id }}" data-id="{{ todo.id }}" class="list-group-item d-flex justify-content-between" onclick="showDetails(this)">`:
+Next, we need to remove the Details, Edit, and Recommendations buttons from the main list. Open the `index.html` file and remove the following code that is within this block of code `<li id="task-{{ todo.id }}" data-id="{{ todo.id }}" class="list-group-item d-flex justify-content-between" onclick="showDetails(this)"> ... </li>`:
 
 ```html
 <button type="submit" class="btn btn-success" formaction="{{ url_for('details', id=todo.id) }}" formmethod="GET">Details</button>
